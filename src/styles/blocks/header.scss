@@ -92,6 +92,10 @@
       font-weight: $font-weight-semibold;
       line-height: $lh-px-50;
 
+      &:hover {
+        background-color: $color-primary-hover;
+      }
+
       @include on-tablet {
         margin-top: $spacing-l;
         width: $w-card-tablet;
@@ -138,7 +142,8 @@
       gap: $spacing-sm;
       margin-bottom: $spacing-md;
       margin-left: $spacing-phone-gap;
-      z-index: 1;
+
+      // z-index: 1;
       bottom: 0;
 
       @include on-tablet {
@@ -196,7 +201,7 @@
     left: 0;
     right: 0;
     bottom: 0;
-    width: $w-mobile-content;
+    width: 100%;
     height: $h-card-lg;
     opacity: 0;
 
