@@ -1,0 +1,66 @@
+.our-expertise {
+  background-color: $color-white;
+  border-radius: $radius-l;
+  padding: $spacing-huge 0;
+
+  @include on-tablet {
+    padding: $padding-xl 0;
+  }
+
+  @include on-small-desktop {
+    padding: $padding-xl 0 $padding-xxl;
+  }
+
+  &__cards {
+    @include page-grid;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+
+    row-gap: $spacing-row-lg;
+
+    @include on-tablet {
+      row-gap: $spacing-huge;
+    }
+
+    @include on-small-desktop {
+      flex-direction: row;
+      align-items: flex-start;
+      row-gap: $spacing-row-xl;
+    }
+
+    @include on-design {
+      row-gap: $spacing-row-huge;
+    }
+  }
+
+  &__title {
+    font-size: $fs-44;
+    line-height: $lh-unit-base;
+    margin-bottom: $spacing-row-lg;
+
+    @include on-tablet {
+      font-size: $fs-52;
+      line-height: $lh-unit-tight;
+      margin-bottom: $h-box-sm;
+    }
+  }
+
+  &__card {
+    grid-column: 1 / -1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+
+    @include on-tablet {
+      width: $w-form-max;
+    }
+
+    @include on-small-desktop {
+      max-width: $mw-item-sm;
+    }
+  }
+}

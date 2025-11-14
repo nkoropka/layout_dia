@@ -1,0 +1,68 @@
+.vision {
+  background-color: $color-white;
+  padding: $spacing-huge $spacing-phone-gap;
+
+  @include on-tablet {
+    background-image: url(../images/Shapes.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: $padding-huge $spacing-ml-custom $padding-xxxl;
+  }
+
+  @include on-small-desktop {
+    padding: $padding-huge $spacing-ml-custom $padding-massive;
+  }
+
+  &__content {
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__title {
+    font-size: $fs-44;
+    line-height: $lh-unit-base;
+
+    @include on-tablet {
+      font-size: $fs-52;
+    }
+
+    @include on-small-desktop {
+      line-height: $lh-unit-tight;
+    }
+  }
+
+  &__description {
+    margin: 0;
+    text-align: center;
+    font-size: $fs-22;
+    font-weight: $font-weight-semibold;
+
+    @include on-tablet {
+      font-size: $fs-24;
+    }
+  }
+
+  &__button {
+    display: inline-block;
+    text-decoration: none;
+    text-align: center;
+    margin-top: $spacing-row-lg;
+    width: 100%;
+    height: $height-input;
+    border: 0;
+    border-radius: $radius-xs;
+    background-color: $color-primary-accent;
+    color: $color-white;
+    font-family: $font-family-title;
+    font-size: $fs-15;
+    font-weight: $font-weight-semibold;
+    line-height: $lh-px-56;
+
+    @include on-tablet {
+      margin-top: $spacing-gap-lg;
+      width: $w-card-tablet;
+    }
+  }
+}

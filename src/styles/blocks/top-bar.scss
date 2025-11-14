@@ -1,0 +1,64 @@
+.top-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: $padding-sm $spacing-phone-gap;
+
+  @include on-tablet {
+    padding: $padding-sm $spacing-ml-custom;
+  }
+
+  @include on-small-desktop {
+    padding: $padding-md $padding-ml $padding-sm;
+  }
+
+  @include on-desktop {
+    padding: $spacing-xl $padding-lg $padding-sm;
+  }
+
+  @include on-design {
+    padding: $spacing-xl $padding-xl-custom $padding-sm;
+  }
+
+  @include on-large {
+    padding: $spacing-xl $padding-extreme $padding-sm;
+  }
+
+  &__icons {
+    display: flex;
+    align-items: baseline;
+    gap: $spacing-l;
+  }
+
+  &__logo-link {
+    display: flex;
+  }
+
+  &__logo {
+    height: $h-control-sm;
+  }
+
+  &__link {
+    display: flex;
+    position: relative;
+    text-decoration: none;
+    text-transform: uppercase;
+    align-items: center;
+    color: $color-white;
+    font-size: $fs-13;
+    font-weight: $font-weight-bold;
+    line-height: $lh-unit-tight;
+    letter-spacing: $ls-3;
+    padding-bottom: $spacing-xs;
+
+    &::after {
+      content: '';
+      position: absolute;
+      background-color: $color-primary-accent;
+      width: 100%;
+      height: $h-line-thin;
+      border-radius: $radius-xxs;
+      bottom: 0;
+    }
+  }
+}

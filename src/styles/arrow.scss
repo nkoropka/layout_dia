@@ -1,0 +1,13 @@
+.arrow {
+  height: $width-xs;
+  width: $width-xs;
+  cursor: pointer;
+
+  &-left {
+    background-image: url(../images/slider/arrow-left.svg);
+  }
+
+  &-right {
+    background-image: url(../images/slider/arrow-right.svg);
+  }
+}

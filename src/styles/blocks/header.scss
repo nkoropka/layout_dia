@@ -1,0 +1,234 @@
+.header {
+  background-color: $color-dark-bg;
+  position: relative;
+  border-radius: 0 0 $radius-l $radius-l;
+  overflow: hidden;
+
+  display: flex;
+  flex-direction: column;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: $width-full;
+    height: $height-full;
+    z-index: -1;
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: $spacing-xl;
+    margin-top: $spacing-ml;
+    flex-grow: 1;
+
+    @include on-tablet {
+      margin-top: $spacing-lg-custom;
+      gap: $spacing-section-ml;
+    }
+
+    @include on-small-desktop {
+      height: $h-hero-lg;
+      flex-direction: row;
+      margin-top: $spacing-phone-gap;
+    }
+  }
+
+  &__top {
+    display: flex;
+    flex-direction: column;
+    gap: $spacing-l;
+
+    @include on-tablet {
+      gap: $spacing-md;
+    }
+
+    @include on-small-desktop {
+      max-width: $w-form-max;
+      gap: $spacing-l;
+    }
+
+    &--title {
+      margin: 0;
+      color: $color-white;
+      letter-spacing: $ls--2;
+
+      @include on-tablet {
+        font-size: $fs-64;
+        line-height: $lh-percent-tight;
+      }
+
+      @include on-small-desktop {
+        margin-top: $spacing-section-md;
+      }
+    }
+
+    &--text {
+      margin: 0;
+      color: $color-white;
+      font-size: $fs-18;
+
+      @include on-tablet {
+        width: $w-form-max;
+      }
+    }
+
+    &--button {
+      display: inline-block;
+      text-decoration: none;
+      text-align: center;
+      margin-top: $spacing-lg;
+      width: $width-full;
+      height: $h-sm-custom;
+      border: 0;
+      border-radius: $radius-xs;
+      background-color: $color-primary-accent;
+      color: $color-white;
+      font-family: $font-family-title;
+      font-size: $fs-15;
+      font-weight: $font-weight-semibold;
+      line-height: $lh-px-50;
+
+      @include on-tablet {
+        margin-top: $spacing-l;
+        width: $w-card-tablet;
+      }
+
+      @include on-small-desktop {
+        margin-top: $spacing-mt-lg;
+      }
+    }
+  }
+
+  &__bottom {
+    box-sizing: border-box;
+    position: relative;
+    background-size: cover;
+    align-items: flex-end;
+    height: $h-card-lg;
+
+    @include on-small-desktop {
+      margin-right: 0;
+      right: 0;
+      box-sizing: border-box;
+      min-width: $mw-col-md;
+      height: $h-hero-lg;
+    }
+
+    @include on-desktop {
+      min-width: $mw-col-lg;
+    }
+
+    @include on-design {
+      min-width: $mw-col-xl;
+    }
+
+    @include on-large {
+      min-width: $mw-col-xxl;
+    }
+
+    &-content {
+      position: absolute;
+      box-sizing: border-box;
+      display: flex;
+      flex-direction: column;
+      gap: $spacing-sm;
+      margin-bottom: $spacing-md;
+      margin-left: $spacing-phone-gap;
+      z-index: 1;
+      bottom: 0;
+
+      @include on-tablet {
+        margin-bottom: $spacing-l;
+        margin-left: $spacing-ml-custom;
+      }
+
+      @include on-small-desktop {
+        flex-direction: row;
+        margin-bottom: $spacing-xl;
+        margin-left: $spacing-ml-lg;
+        align-items: center;
+      }
+
+      @include on-design {
+        margin-left: $spacing-xl;
+      }
+    }
+
+    &--arrows {
+      display: flex;
+      gap: $spacing-sm;
+    }
+
+    &--info {
+      display: flex;
+      flex-direction: column;
+      max-width: $mw-text-sm;
+      z-index: 1;
+      bottom: 0;
+    }
+
+    &--title {
+      color: $color-white;
+      font-weight: $font-weight-bold;
+      font-size: $fs-13;
+      line-height: $lh-px-19-5;
+      letter-spacing: $ls-3;
+      text-transform: uppercase;
+      margin: 0;
+      margin-bottom: $spacing-xs;
+    }
+
+    &--text {
+      color: $color-white;
+      font-weight: $font-weight-regular;
+      font-size: $fs-14;
+      line-height: $lh-px-19-6;
+      margin: 0;
+    }
+  }
+
+  &__image {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: $w-mobile-content;
+    height: $h-card-lg;
+    opacity: 0;
+
+    object-fit: cover;
+
+    border-radius: $radius-l $radius-l 0 0;
+
+    @include on-tablet {
+      width: $w-tablet-content;
+    }
+
+    @include on-small-desktop {
+      width: $w-custom-md;
+      height: $h-hero-lg;
+      border-radius: $radius-l 0 0 0;
+    }
+
+    @include on-desktop {
+      width: $mw-col-lg;
+      height: $h-hero-lg;
+    }
+
+    @include on-design {
+      width: $mw-col-xl;
+    }
+
+    @include on-large {
+      width: $mw-col-xxl;
+    }
+
+    &--active {
+      opacity: 1;
+    }
+  }
+}
