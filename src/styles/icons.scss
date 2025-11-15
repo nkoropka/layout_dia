@@ -22,35 +22,35 @@
   }
 
   &--facebook {
-    background-image: url(../images/facebook-icon.svg);
     width: $width-xs;
     height: $height-xs;
+    background-image: url(../images/facebook-icon.svg);
 
     &:hover {
-      background-image: url(../images/facebook-icon-blue.svg);
       transform: none;
+      background-image: url(../images/facebook-icon-blue.svg);
     }
   }
 
   &--twitter {
-    background-image: url(../images/twitter-icon.svg);
     width: $width-xs;
     height: $height-xs;
+    background-image: url(../images/twitter-icon.svg);
 
     &:hover {
-      background-image: url(../images/twitter-icon-blue.svg);
       transform: none;
+      background-image: url(../images/twitter-icon-blue.svg);
     }
   }
 
   &--instagram {
-    background-image: url(../images/instagram-icon.svg);
     width: $width-xs;
     height: $height-xs;
+    background-image: url(../images/instagram-icon.svg);
 
     &:hover {
-      background-image: url(../images/instagram-icon-blue.svg);
       transform: none;
+      background-image: url(../images/instagram-icon-blue.svg);
     }
   }
 }

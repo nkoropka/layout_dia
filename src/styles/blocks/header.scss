@@ -1,38 +1,43 @@
 .header {
-  background-color: $color-dark-bg;
   position: relative;
-  border-radius: 0 0 $radius-l $radius-l;
-  overflow: hidden;
 
+  overflow: hidden;
   display: flex;
   flex-direction: column;
 
+  border-radius: 0 0 $radius-l $radius-l;
+
+  background-color: $color-dark-bg;
+
   &::before {
     content: '';
+
     position: absolute;
+    z-index: -1;
     top: 0;
     left: 0;
+
     width: $width-full;
     height: $height-full;
-    z-index: -1;
   }
 
   &__content {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    gap: $spacing-xl;
-    margin-top: $spacing-ml;
     flex-grow: 1;
+    gap: $spacing-xl;
+    justify-content: space-between;
+
+    margin-top: $spacing-ml;
 
     @include on-tablet {
-      margin-top: $spacing-lg-custom;
       gap: $spacing-section-ml;
+      margin-top: $spacing-lg-custom;
     }
 
     @include on-small-desktop {
-      height: $h-hero-lg;
       flex-direction: row;
+      height: $h-hero-lg;
       margin-top: $spacing-phone-gap;
     }
   }
@@ -47,8 +52,8 @@
     }
 
     @include on-small-desktop {
-      max-width: $w-form-max;
       gap: $spacing-l;
+      max-width: $w-form-max;
     }
 
     &--title {
@@ -68,8 +73,8 @@
 
     &--text {
       margin: 0;
-      color: $color-white;
       font-size: $fs-18;
+      color: $color-white;
 
       @include on-tablet {
         width: $w-form-max;
@@ -78,27 +83,30 @@
 
     &--button {
       display: inline-block;
-      text-decoration: none;
-      text-align: center;
-      margin-top: $spacing-lg;
+
       width: $width-full;
       height: $h-sm-custom;
+      margin-top: $spacing-lg;
       border: 0;
       border-radius: $radius-xs;
-      background-color: $color-primary-accent;
-      color: $color-white;
+
       font-family: $font-family-title;
       font-size: $fs-15;
       font-weight: $font-weight-semibold;
       line-height: $lh-px-50;
+      color: $color-white;
+      text-align: center;
+      text-decoration: none;
+
+      background-color: $color-primary-accent;
 
       &:hover {
         background-color: $color-primary-hover;
       }
 
       @include on-tablet {
-        margin-top: $spacing-l;
         width: $w-card-tablet;
+        margin-top: $spacing-l;
       }
 
       @include on-small-desktop {
@@ -108,18 +116,22 @@
   }
 
   &__bottom {
-    box-sizing: border-box;
     position: relative;
-    background-size: cover;
+
     align-items: flex-end;
+
+    box-sizing: border-box;
     height: $h-card-lg;
 
+    background-size: cover;
+
     @include on-small-desktop {
-      margin-right: 0;
       right: 0;
+
       box-sizing: border-box;
       min-width: $mw-col-md;
       height: $h-hero-lg;
+      margin-right: 0;
     }
 
     @include on-desktop {
@@ -136,15 +148,17 @@
 
     &-content {
       position: absolute;
-      box-sizing: border-box;
-      display: flex;
-      flex-direction: column;
-      gap: $spacing-sm;
-      margin-bottom: $spacing-md;
-      margin-left: $spacing-phone-gap;
 
       // z-index: 1;
       bottom: 0;
+
+      display: flex;
+      flex-direction: column;
+      gap: $spacing-sm;
+
+      box-sizing: border-box;
+      margin-bottom: $spacing-md;
+      margin-left: $spacing-phone-gap;
 
       @include on-tablet {
         margin-bottom: $spacing-l;
@@ -153,9 +167,9 @@
 
       @include on-small-desktop {
         flex-direction: row;
+        align-items: center;
         margin-bottom: $spacing-xl;
         margin-left: $spacing-ml-lg;
-        align-items: center;
       }
 
       @include on-design {
@@ -169,45 +183,49 @@
     }
 
     &--info {
-      display: flex;
-      flex-direction: column;
-      max-width: $mw-text-sm;
       z-index: 1;
       bottom: 0;
+
+      display: flex;
+      flex-direction: column;
+
+      max-width: $mw-text-sm;
     }
 
     &--title {
-      color: $color-white;
-      font-weight: $font-weight-bold;
-      font-size: $fs-13;
-      line-height: $lh-px-19-5;
-      letter-spacing: $ls-3;
-      text-transform: uppercase;
       margin: 0;
       margin-bottom: $spacing-xs;
+
+      font-size: $fs-13;
+      font-weight: $font-weight-bold;
+      line-height: $lh-px-19-5;
+      color: $color-white;
+      text-transform: uppercase;
+      letter-spacing: $ls-3;
     }
 
     &--text {
-      color: $color-white;
-      font-weight: $font-weight-regular;
-      font-size: $fs-14;
-      line-height: $lh-px-19-6;
       margin: 0;
+
+      font-size: $fs-14;
+      font-weight: $font-weight-regular;
+      line-height: $lh-px-19-6;
+      color: $color-white;
     }
   }
 
   &__image {
     position: absolute;
-    left: 0;
     right: 0;
     bottom: 0;
+    left: 0;
+
     width: 100%;
     height: $h-card-lg;
-    opacity: 0;
-
-    object-fit: cover;
-
     border-radius: $radius-l $radius-l 0 0;
+
+    opacity: 0;
+    object-fit: cover;
 
     @include on-tablet {
       width: $w-tablet-content;

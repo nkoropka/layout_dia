@@ -1,7 +1,7 @@
 .footer {
-  background-color: $color-dark-bg;
-  border-radius: $radius-l $radius-l 0 0;
   padding: $spacing-huge 0 $spacing-section-sm;
+  border-radius: $radius-l $radius-l 0 0;
+  background-color: $color-dark-bg;
 
   @include on-tablet {
     padding: $spacing-section-lg 0 $spacing-section-sm;
@@ -19,10 +19,9 @@
 
   &__form {
     display: flex;
+    grid-column: 1 / -1;
     flex-direction: column;
     gap: $spacing-lg;
-
-    grid-column: 1 / -1;
 
     @include on-tablet {
       gap: $spacing-xl;
@@ -35,8 +34,8 @@
 
   &__wrapper {
     display: flex;
-    flex-direction: column;
     grid-column: 1 / -1;
+    flex-direction: column;
     gap: $spacing-lg;
 
     @include on-tablet {
@@ -77,16 +76,17 @@
   &__input {
     box-sizing: border-box;
     width: $width-full;
+    height: $height-custom-sm;
     padding-bottom: $spacing-sm;
     border: none;
     border-bottom: $height-line solid $color-white;
-    background-color: transparent;
 
     font-family: $font-family-title;
     font-size: $fs-15;
     font-weight: $font-weight-semibold;
     color: $color-white;
-    height: $height-custom-sm;
+
+    background-color: transparent;
     outline: none;
 
     transition: color $effectDuration ease;
@@ -99,18 +99,20 @@
   &__textarea {
     resize: none;
     scrollbar-width: none;
+
     box-sizing: border-box;
     width: $width-full;
     height: $height-custom-sm;
     padding-bottom: $spacing-sm;
     border: none;
     border-bottom: $height-line solid $color-white;
-    background-color: transparent;
 
     font-family: $font-family-title;
     font-size: $fs-15;
     font-weight: $font-weight-semibold;
     color: $color-white;
+
+    background-color: transparent;
     outline: none;
 
     transition: color $effectDuration ease;
@@ -122,48 +124,53 @@
 
   &__button {
     display: inline-block;
-    text-decoration: none;
-    text-align: center;
-    margin-top: $spacing-sm;
+
     width: $width-full;
     height: $height-input;
+    margin-top: $spacing-sm;
     border: 0;
     border-radius: $radius-xs;
-    background-color: $color-primary-accent;
-    color: $color-white;
+
     font-family: $font-family-title;
     font-size: $fs-15;
     font-weight: $font-weight-semibold;
     line-height: $lh-px-56;
+    color: $color-white;
+    text-align: center;
+    text-decoration: none;
+
+    background-color: $color-primary-accent;
 
     &:hover {
       background-color: $color-primary-hover;
     }
 
     @include on-tablet {
-      margin-top: $spacing-l;
       width: $w-card-tablet;
+      margin-top: $spacing-l;
     }
   }
 
   &__title {
-    color: $color-white;
-    text-align: left;
     margin: 0;
     margin-bottom: $spacing-xs;
 
     line-height: $lh-unit;
+    color: $color-white;
+    text-align: left;
   }
 
   &__lable {
     margin: 0;
-    text-transform: uppercase;
-    white-space: nowrap;
+
     font-family: $font-family-title;
     font-size: $fs-13;
     font-weight: $font-weight-bold;
-    letter-spacing: $ls-3;
     color: $color-white;
+    text-transform: uppercase;
+    letter-spacing: $ls-3;
+    white-space: nowrap;
+
     opacity: $op-half;
   }
 
@@ -184,8 +191,8 @@
 
   &__nav {
     display: flex;
-    flex-direction: column;
     grid-column: 1 / -1;
+    flex-direction: column;
     gap: $spacing-xl;
 
     @include on-tablet {

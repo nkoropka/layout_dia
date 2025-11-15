@@ -1,7 +1,7 @@
 .our-expertise {
-  background-color: $color-white;
-  border-radius: $radius-l;
   padding: $spacing-huge 0;
+  border-radius: $radius-l;
+  background-color: $color-white;
 
   @include on-tablet {
     padding: $padding-xl 0;
@@ -15,11 +15,10 @@
     @include page-grid;
 
     display: flex;
+    flex-direction: column;
+    row-gap: $spacing-row-lg;
     align-items: center;
     justify-content: space-between;
-    flex-direction: column;
-
-    row-gap: $spacing-row-lg;
 
     @include on-tablet {
       row-gap: $spacing-huge;
@@ -27,8 +26,8 @@
 
     @include on-small-desktop {
       flex-direction: row;
-      align-items: flex-start;
       row-gap: $spacing-row-xl;
+      align-items: flex-start;
     }
 
     @include on-design {
@@ -37,23 +36,23 @@
   }
 
   &__title {
+    margin-bottom: $spacing-row-lg;
     font-size: $fs-44;
     line-height: $lh-unit-base;
-    margin-bottom: $spacing-row-lg;
 
     @include on-tablet {
+      margin-bottom: $h-box-sm;
       font-size: $fs-52;
       line-height: $lh-unit-tight;
-      margin-bottom: $h-box-sm;
     }
   }
 
   &__card {
-    grid-column: 1 / -1;
     display: flex;
+    grid-column: 1 / -1;
     flex-direction: column;
-    justify-content: space-between;
     align-items: center;
+    justify-content: space-between;
 
     @include on-tablet {
       width: $w-form-max;

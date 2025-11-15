@@ -2,8 +2,8 @@
   &__content {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
     gap: $spacing-xl;
+    justify-content: space-between;
 
     @include on-tablet {
       gap: $spacing-row-lg;
@@ -11,7 +11,6 @@
 
     @include on-small-desktop {
       flex-direction: row;
-
       align-items: flex-start;
     }
   }
@@ -36,17 +35,18 @@
     &-lable {
       margin: 0;
       margin-bottom: $spacing-sm;
-      text-transform: uppercase;
+
       font-family: $font-family-title;
       font-size: $fs-13;
       font-weight: $font-weight-bold;
-      letter-spacing: $ls-3;
       color: $color-text-label;
+      text-transform: uppercase;
+      letter-spacing: $ls-3;
     }
 
     &-title {
-      text-align: left;
       line-height: $lh-unit;
+      text-align: left;
     }
 
     &-text {
@@ -63,8 +63,8 @@
 
     @include on-tablet {
       flex-flow: row wrap;
-      justify-content: flex-end;
       gap: $spacing-ml;
+      justify-content: flex-end;
     }
 
     @include on-small-desktop {
@@ -81,9 +81,10 @@
 
   &__item {
     box-sizing: border-box;
-    background-color: $color-white;
-    border-radius: $radius-s;
     padding: $spacing-l;
+    border-radius: $radius-s;
+
+    background-color: $color-white;
     box-shadow: 0 9px 18px 0 #25293108;
 
     transition: transform $effectDuration ease-out;
@@ -97,8 +98,8 @@
       height: $h-card-tablet;
 
       &:nth-child(2n) {
-        gap: 0;
         transform: translateY(-50%);
+        gap: 0;
       }
 
       &:nth-child(2n):hover {
@@ -117,18 +118,21 @@
     &-number-wrap {
       display: flex;
       justify-content: center;
+
       width: $w-num-circle;
-      border-radius: $radius-circle-md;
-      background-color: #e9f0ff;
       margin-bottom: $spacing-md;
+      border-radius: $radius-circle-md;
+
+      background-color: #e9f0ff;
 
       &-item {
         margin: 0;
+
         font-family: $font-family-title;
         font-size: $fs-13;
         font-weight: $font-weight-semibold;
-        color: $color-primary-accent;
         line-height: $lh-px-24;
+        color: $color-primary-accent;
       }
     }
 
@@ -144,12 +148,11 @@
 
     &-link {
       display: flex;
-      align-items: center;
       gap: $spacing-sm;
+      align-items: center;
 
       &-icon {
         display: block;
-
         transition: transform $effectDuration ease-out;
       }
 
@@ -164,13 +167,15 @@
       }
 
       &-info {
-        margin: 0;
-        text-decoration: none;
         align-self: center;
-        color: $color-text-link;
+
+        margin: 0;
+
         font-family: $font-family-title;
         font-size: $fs-15;
         font-weight: $font-weight-semibold;
+        color: $color-text-link;
+        text-decoration: none;
       }
     }
   }

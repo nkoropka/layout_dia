@@ -1,7 +1,7 @@
 .arrow {
-  height: $width-xs;
-  width: $width-xs;
   cursor: pointer;
+  width: $width-xs;
+  height: $width-xs;
 
   &-left {
     background-image: url(../images/slider/arrow-left.svg);
